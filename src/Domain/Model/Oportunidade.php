@@ -20,19 +20,14 @@ class Oportunidade
     private $idOportunidade;
     /**
      * @var String
-     * @Serializer\Type ("string")
      */
     private $descricao;
     /**
-     * @var \DateTime
-     * @Serializer\SerializedName ("periodoInicial")
-     * @Serializer\Type ("DateTime<'d/m/y'>")
+     * @var \DateTime")
      */
     private $periodoInicial;
     /**
      * @var \DateTime
-     * @Serializer\SerializedName ("periodoFinal")
-     * Serializer\Type ("DateTime<'d/m/y'>"
      * */
     private $periodoFinal;
 

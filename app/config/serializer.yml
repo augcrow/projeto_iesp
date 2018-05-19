@@ -5,3 +5,7 @@ jms_serializer:
             default_time_format: 'UTC'
     metadata:
         auto_detection: true
+        directories:
+            DominModel:
+              namespace_prefix: Domanin\Model
+              path: '%kernel.root_dir%/Resources/Infrastructure/Serializer/JMS'
