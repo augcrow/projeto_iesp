@@ -9,6 +9,7 @@
 namespace Infrastructure\Service;
 
 
+use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 
 class SerializerService
@@ -28,12 +29,21 @@ class SerializerService
     }
 
     public function converter ($json, $tipo){
-        return $this ->serializer->deserialize($json, $tipo, 'json');
 
-       /* try{
+        try{
+             return $this ->serializer->deserialize($json, $tipo, 'json');
         }catch (\Exception $exception){
 
             dump($exception->getMessage()); die;
-        }*/
+        }
     }
+
+    public function toJsonByGroups ($data, array $groups = ['default']){
+        return $this->serializer->serialize(
+            $data,
+            'json',
+            SerializationContext::create()->setGroups($groups));
+
+    }
+
 }
