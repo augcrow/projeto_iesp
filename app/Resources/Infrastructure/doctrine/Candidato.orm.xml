@@ -14,7 +14,7 @@
         <many-to-many target-entity="Domain\Model\HabilidadeTecnica" field="habilidadesTecnicas">
         <join-table name ="idCandidato" referenced-colum-name="id"/>
 
-        
+
 
         </many-to-many>
 
